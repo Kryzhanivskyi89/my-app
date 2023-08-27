@@ -3,8 +3,10 @@ import { lazy, Suspense } from 'react'
 import { Route, Routes } from 'react-router-dom';
 
 import Layout from './Layout/Layout'
-import { LoginPage } from './pages/loginPage/LoginPage';
-
+// import { LoginPage } from './pages/authPage/AuthPage';
+import Login from './pages/authPage/Login';
+import Signup from './pages/authPage/Signup';
+import { Contacts } from './pages/Contacts';
 const HomePage = lazy(() => import('./pages/HomePage'))
 
 function App() {
@@ -12,25 +14,25 @@ function App() {
 
 	<Routes>
 		<Route path='/' element={<Layout />}>
-		<Route index element={<HomePage />}/>
-		
-		<Route />
-		<Route />
+			<Route index element={<HomePage />}/>
+			
+			<Route path='/contacts' element={<Contacts />}/>
+			<Route />
 		
 		</Route>
 		
 		<Route path='/login' element={
 			<Suspense>
-						 {/* <PublicRoute> */}
-							<LoginPage />
-						{/* </PublicRoute>  */}
+				{/* <PublicRoute> */}
+					<Login />
+				{/* </PublicRoute>  */}
 			</Suspense>
 			}/>
 		<Route path='/signUp' element={
 			<Suspense>
-					{/* <PublicRoute>
-						<RegistrationPage />
-					</PublicRoute> */}
+				{/* <PublicRoute> */}
+					<Signup />
+				{/* </PublicRoute> */}
 			</Suspense>
 			}/>
 	</Routes>

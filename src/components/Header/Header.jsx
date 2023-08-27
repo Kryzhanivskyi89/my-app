@@ -1,25 +1,33 @@
 import { NavLink, useNavigate } from "react-router-dom"
+import { useState } from 'react'
 
 import style from './style.module.css'
-import { LoginPage } from "../pages/loginPage/LoginPage"
 
-const Header = () => {
+
+const Header = ({showModal}) => {
+
+    // const [isShowModal, setIsShowModal] = useState(false)
+
+	// const showModal = () => setIsShowModal(true)
+
+	// const closeModal = () => setIsShowModal(false)
+
 
     const navigate = useNavigate()
-	const handleLogin = () => {
-		navigate('/login')
+	const handleSignUp = () => {
+		navigate('/signup')
 	}
 
 	return (
 		<>
             <nav className={style.navbar}>
-                <div class={style.logo}>ANDREW</div>  {/* <!-- LOGO --> */}
+                <div className={style.logo}>ANDREW</div>  {/* <!-- LOGO --> */}
 
                 <ul className={style.nav__links}>  {/* <!-- NAVIGATION MENU --> */}
                     
                     {/* <!-- USING CHECKBOX HACK --> */}
                     <input type="checkbox" id="checkbox_toggle" />
-                    <label for="checkbox_toggle" className={style.hamburger}>&#9776;</label>
+                    <label htmlFor="checkbox_toggle" className={style.hamburger}>&#9776;</label>
                     
                     <div className={style.menu}>  {/* <!-- NAVIGATION MENUS --> */}
                         <li>
@@ -44,14 +52,17 @@ const Header = () => {
                 </ul>
                          
                 <div>
-                    <button
+                    <button className={style.btn} onClick={showModal}>
+                        Sign Up
+		 			</button>
+                    {/* <button
                         className={style.btn}
-                        onClick={handleLogin}
-						// onClick={profile ? handleLogOut : handleLogin}
+                        onClick={handleSignUp}
+						onClick={profile ? handleLogOut : handleLogin}
                     >
-                        Login
-						{/* {profile ? 'LogOut' : 'LogIn'} */}
-					</button> 
+                        Sign Up
+						{profile ? 'LogOut' : 'LogIn'}
+					</button>  */}
                 </div>
             </nav>
 		</>
@@ -59,3 +70,5 @@ const Header = () => {
 }
 
 export default Header
+
+
