@@ -2,8 +2,12 @@ import { NavLink, useNavigate } from "react-router-dom"
 import { useState } from 'react'
 
 import style from './style.module.css'
+// import Modal from "../Modal/Modal"
+// import Login from "../pages/authPage/Login"
+// import Signup from "../pages/authPage/Signup"
 
 
+// 
 const Header = ({showModal}) => {
 
     // const [isShowModal, setIsShowModal] = useState(false)
@@ -16,6 +20,10 @@ const Header = ({showModal}) => {
     const navigate = useNavigate()
 	const handleSignUp = () => {
 		navigate('/signup')
+    }
+    
+    const handleLogin = () => {
+		navigate('/login')
 	}
 
 	return (
@@ -52,17 +60,19 @@ const Header = ({showModal}) => {
                 </ul>
                          
                 <div>
-                    <button className={style.btn} onClick={showModal}>
+
+
+                    <button className={style.btn} onClick={handleSignUp}>
                         Sign Up
 		 			</button>
-                    {/* <button
+                    <button
                         className={style.btn}
-                        onClick={handleSignUp}
-						onClick={profile ? handleLogOut : handleLogin}
+                        onClick={handleLogin}
+						// onClick={profile ? handleLogOut : handleLogin}
                     >
-                        Sign Up
-						{profile ? 'LogOut' : 'LogIn'}
-					</button>  */}
+                        Login
+						{/* {profile ? 'LogOut' : 'LogIn'} */}
+					</button> 
                 </div>
             </nav>
 		</>

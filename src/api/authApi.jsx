@@ -3,11 +3,11 @@ import axios from 'axios'
 
 // Публічні маршрути
 const publicInstance = axios.create({
-	// baseURL: 'https://api.escuelajs.co/api/v1',
+	// baseURL: 'https://andrew-woc6.onrender.com',
 })
 // Приватні маршрути
 const privateInstance = axios.create({
-	// baseURL: 'https://api.escuelajs.co/api/v1',
+	// baseURL: 'https://andrew-woc6.onrender.com',
 })
 
 const setToken = (token) => {

@@ -4,12 +4,12 @@ import { Outlet } from 'react-router-dom'
 import Header from '../Header/Header'
 import Modal from '../Modal/Modal'
 import Signup from '../pages/authPage/Signup'
-
+import Login from '../pages/authPage/Login'
 
 
 const Layout = () => {
 	const [isShowModal, setIsShowModal] = useState(false)
-
+	
 	const showModal = () => setIsShowModal(true)
 
 	const closeModal = () => setIsShowModal(false)
@@ -23,14 +23,15 @@ const Layout = () => {
 				<Outlet />
 			</Suspense>
 			{isShowModal && (
-				<Modal closeModal={closeModal}>
+				<>
 					<Signup />
-					{/* <FormLogin
-						closeModal={closeModal}
-						createUser={createUser}
-					/> */}
+				<Modal closeModal={closeModal}>
+					{/* <Login /> */}
 				</Modal>
+					</>
 			)}
+			
+			
 			{/* Footer */}
 		</div>
 	)

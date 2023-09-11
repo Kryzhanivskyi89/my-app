@@ -25,12 +25,12 @@ const Login = () => {
                                                 <h4 className="mb-4 pb-3">Log In</h4>
 
                                                 <div className={style.form__group}>
-                                                    <input type="email" name="email" className={style.form__style} placeholder="Your Email" id="email" autocomplete="off"/>
+                                                    <input type="email" name="email" className={style.form__style} placeholder="Your Email" id="email" autoComplete="off"/>
                                                         <i className={style.input__icon /*uil uil-at*/}></i>
                                                 </div>  
 
                                                 <div className={style.form__group /*style.mt__2*/} >
-                                                    <input type="password" name="password" className={style.form__style} placeholder="Your Password" id="password" autocomplete="off"/>
+                                                    <input type="password" name="password" className={style.form__style} placeholder="Your Password" id="password" autoComplete="off"/>
                                                         <i className="input__icon uil uil-lock-alt"></i>
                                                 </div>
 
