@@ -60,9 +60,9 @@ const Header = ({showModal}) => {
                 </ul>
                          
                 <div>
-
-
-                    <button className={style.btn} onClick={handleSignUp}>
+                    <button
+                        className={style.btn}
+                        onClick={handleSignUp}>
                         Sign Up
 		 			</button>
                     <button

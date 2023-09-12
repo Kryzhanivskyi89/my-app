@@ -22,14 +22,15 @@ const Layout = () => {
 			<Suspense fallback={<h1>Loading...</h1>}>
 				<Outlet />
 			</Suspense>
-			{isShowModal && (
+			
+			{/* {isShowModal && (
 				<>
 					<Signup />
-				<Modal closeModal={closeModal}>
-					{/* <Login /> */}
-				</Modal>
-					</>
-			)}
+					<Modal closeModal={closeModal}>
+					
+					</Modal>
+				</>
+			)} */}
 			
 			
 			{/* Footer */}
