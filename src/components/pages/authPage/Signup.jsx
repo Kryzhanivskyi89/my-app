@@ -15,11 +15,12 @@ function Signup() {
 
             try {
                 const newUser = await dispatch(registerThunk(values));
+                console.log(newUser)
             } catch (error) {
                 console.log(error);
             }
 
-        resetForm();
+        // resetForm();
     }
     
     return (

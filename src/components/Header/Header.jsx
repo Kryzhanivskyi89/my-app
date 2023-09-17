@@ -19,11 +19,11 @@ const Header = ({showModal}) => {
 
     const navigate = useNavigate()
 	const handleSignUp = () => {
-		navigate('/signup')
+		navigate('/auth/:id')
     }
     
     const handleLogin = () => {
-		navigate('/login')
+		navigate('/auth/signin')
 	}
 
 	return (
