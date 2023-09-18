@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { Notify } from 'notiflix';
 
-axios.defaults.baseURL = 'https://andrew-woc6.onrender.com/';
+   axios.defaults.baseURL = 'https://andrew-o1p4.onrender.com';
 
 const tokenOperation = {
   setToken: token => {

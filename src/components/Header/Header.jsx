@@ -6,6 +6,8 @@ import style from './style.module.css'
 // import Login from "../pages/authPage/Login"
 // import Signup from "../pages/authPage/Signup"
 
+import { useDispatch } from 'react-redux';
+import { logoutThunk } from '../../redux/auth/authOperations';
 
 // 
 const Header = ({showModal}) => {
@@ -15,7 +17,7 @@ const Header = ({showModal}) => {
 	// const showModal = () => setIsShowModal(true)
 
 	// const closeModal = () => setIsShowModal(false)
-
+const dispatch = useDispatch();
 
     const navigate = useNavigate()
 	const handleSignUp = () => {
@@ -72,7 +74,11 @@ const Header = ({showModal}) => {
                     >
                         Login
 						{/* {profile ? 'LogOut' : 'LogIn'} */}
-					</button> 
+                    </button> 
+                    <button
+            type="button"
+            onClick={() => dispatch(logoutThunk())}
+          >Logout</button>
                 </div>
             </nav>
 		</>
