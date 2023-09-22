@@ -6,7 +6,7 @@ import { PrivateRoute } from '../route/PrivateRoute';
 import RestrictedRoute from '../route/RestrictedRoute';
 import AuthPage from './pages/authPage/AuthPage';
 import Layout from './Layout/Layout'
-import { Contacts } from './pages/Contacts';
+import { Chat } from './pages/Chat';
 const HomePage = lazy(() => import('./pages/HomePage'))
 
 
@@ -18,14 +18,14 @@ function App() {
 			element={<RestrictedRoute component={<AuthPage />} />}
 		/>
 		
-		  <Route path='/' element={
+			<Route path='/' element={
 			//   <PrivateRoute component={
 				  <Layout />
 			//   } />
 			  }>
 			<Route index element={<HomePage />}/>
 			
-			<Route path='/contacts' element={<Contacts />}/>
+			<Route path='/chat' element={<Chat />}/>
 			<Route />
 		
 		</Route>

@@ -1,26 +1,4 @@
 
-
-/* UTILITIES */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: cursive;
-    background-color: #ffd700;
-}
-
-a {
-    text-decoration: none;
-}
-
-li {
-    list-style: none;
-}
-
-
 /* NAVBAR STYLING STARTS */
 .navbar {
     display: flex;

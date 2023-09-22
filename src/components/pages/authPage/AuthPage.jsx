@@ -8,14 +8,14 @@ const AuthPage = () => {
   const { id } = useParams();
 
   return (
-    // <main>
-    //   <Section>
-    //     <Container>
-    //       <ImgWrapper />
+    <main>
+      {/* <Section>
+      <Container>
+      <ImgWrapper /> */}
           <AuthForm isRegistration={id !== 'signin'} />
-    //     </Container>
-    //   </Section>
-    // </main>
+      {/* </Container>
+      </Section> */}
+    </main>
   );
 };
 

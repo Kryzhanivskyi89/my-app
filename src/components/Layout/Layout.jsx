@@ -2,9 +2,10 @@ import { Suspense, useState } from 'react'
 import { Outlet } from 'react-router-dom'
 
 import Header from '../Header/Header'
-import Modal from '../Modal/Modal'
-import Signup from '../pages/authPage/Signup'
-import Login from '../pages/authPage/Login'
+// import Modal from '../Modal/Modal'
+// import Signup from '../pages/authPage/Signup'
+// import Login from '../pages/authPage/Login'
+import Footer from '../Footer/Footer'
 
 
 const Layout = () => {
@@ -17,23 +18,25 @@ const Layout = () => {
 	return (
 		<div className='container'>
 			
-			<Header  showModal={showModal}/>
+			<Header showModal={showModal} />
+			
+			<main>
+				<section>
+					<Suspense fallback={<h1>Loading...</h1>}>
+						<Outlet />
+					</Suspense>
 
-			<Suspense fallback={<h1>Loading...</h1>}>
-				<Outlet />
-			</Suspense>
-			
-			{/* {isShowModal && (
-				<>
-					<Signup />
-					<Modal closeModal={closeModal}>
-					
-					</Modal>
-				</>
-			)} */}
-			
-			
-			{/* Footer */}
+					{/* {isShowModal && (
+						<>
+							<Modal closeModal={closeModal}>
+							
+							</Modal>
+						</>
+					)} */}
+				</section>
+			</main>
+
+			<Footer/>
 		</div>
 	)
 }

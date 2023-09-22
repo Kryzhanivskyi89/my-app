@@ -1,5 +1,5 @@
 import { NavLink, useNavigate } from "react-router-dom"
-import { useState } from 'react'
+// import { useState } from 'react'
 
 import style from './style.module.css'
 // import Modal from "../Modal/Modal"
@@ -17,7 +17,7 @@ const Header = ({showModal}) => {
 	// const showModal = () => setIsShowModal(true)
 
 	// const closeModal = () => setIsShowModal(false)
-const dispatch = useDispatch();
+    const dispatch = useDispatch();
 
     const navigate = useNavigate()
 	const handleSignUp = () => {
@@ -44,18 +44,19 @@ const dispatch = useDispatch();
                             <NavLink to='/'>Home</NavLink>
                         </li>
                         <li>
-                            <NavLink to='/contacts'>Contacts</NavLink>
+                            <NavLink to='/chat'>Chat</NavLink>
                         </li>
                         <li className={style.services}>
-                            <a href="/">Services</a>
+                            <a href="/">Contacts</a>
 
                             {/* <!-- DROPDOWN MENU --> */}
                             <ul className={style.dropdown}>
-                                <li><a href="/">Dropdown 1 </a></li>
-                                <li><a href="/">Dropdown 2</a></li>
-                                <li><a href="/">Dropdown 2</a></li>
-                                <li><a href="/">Dropdown 3</a></li>
-                                <li><a href="/">Dropdown 4</a></li>
+                                <li><a href="https://www.linkedin.com/in/andrew-full-stack/">LinkedIn </a></li>
+                                <li><a href="https://www.facebook.com/andriykryzhanivskyi/">Facebook</a></li>
+                                <li><a href="https://www.instagram.com/andrii_krizhanivskyi/">Instagram</a></li>
+                                <li><a href="https://t.me/andrew_506">Telegram</a></li>
+                                <li><a href="https://www.youtube.com/@andrewecolog4426/featured">YouTube</a></li> 
+                                <li><a href="https://github.com/Kryzhanivskyi89">GitHub</a></li>
                             </ul>
                         </li>
                     </div>
@@ -76,8 +77,8 @@ const dispatch = useDispatch();
 						{/* {profile ? 'LogOut' : 'LogIn'} */}
                     </button> 
                     <button
-            type="button"
-            onClick={() => dispatch(logoutThunk())}
+                        type="button"
+                        onClick={() => dispatch(logoutThunk())}
           >Logout</button>
                 </div>
             </nav>
