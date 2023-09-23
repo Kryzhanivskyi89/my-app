@@ -7,6 +7,7 @@ import RestrictedRoute from '../route/RestrictedRoute';
 import AuthPage from './pages/authPage/AuthPage';
 import Layout from './Layout/Layout'
 import { Chat } from './pages/Chat';
+import { AuthButton } from './AuthButton/AuthButton';
 const HomePage = lazy(() => import('./pages/HomePage'))
 
 
@@ -15,10 +16,10 @@ function App() {
 
 	<Routes>
 		<Route path="/auth/:id"
-			element={<RestrictedRoute component={<AuthPage />} />}
+			element={<RestrictedRoute component={<AuthPage /> } />}
 		/>
 		
-			<Route path='/' element={
+		<Route path='/' element={
 			//   <PrivateRoute component={
 				  <Layout />
 			//   } />

@@ -1,5 +1,6 @@
 import { Suspense, useState } from 'react'
 import { Outlet } from 'react-router-dom'
+// import { useParams } from 'react-router-dom';
 
 import Header from '../Header/Header'
 // import Modal from '../Modal/Modal'
@@ -9,6 +10,8 @@ import Footer from '../Footer/Footer'
 
 
 const Layout = () => {
+	// const { id } = useParams();
+	
 	const [isShowModal, setIsShowModal] = useState(false)
 	
 	const showModal = () => setIsShowModal(true)
@@ -18,7 +21,10 @@ const Layout = () => {
 	return (
 		<div className='container'>
 			
-			<Header showModal={showModal} />
+			<Header
+				// isRegistration={id !== 'signin'}
+				// showModal={showModal}
+			/>
 			
 			<main>
 				<section>
