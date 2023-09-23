@@ -48,7 +48,7 @@ const Header = ({isRegistration, showModal}) => {
                             <NavLink to='/chat'>Chat</NavLink>
                         </li>
                         <li className={style.services}>
-                            <a href="/">Contacts</a>
+                            <NavLink href="">Contacts</NavLink>
 
                             {/* <!-- DROPDOWN MENU --> */}
                             <ul className={style.dropdown}>

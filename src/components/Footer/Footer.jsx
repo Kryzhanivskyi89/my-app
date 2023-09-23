@@ -1,15 +1,10 @@
 import { NavLink, useNavigate } from "react-router-dom"
-// import { useState } from 'react'
 import axios from 'axios';
 import { Notify } from 'notiflix';
+
 import style from './style.module.css'
 
-
-import { useDispatch } from 'react-redux';
-import { logoutThunk } from '../../redux/auth/authOperations';
-
-// 
-const Footer = ({ showModal }) => {
+const Footer = () => {
     
     const handleSubmit = event => {
     event.preventDefault();
@@ -20,6 +15,7 @@ const Footer = ({ showModal }) => {
         inputEmail: imputEmail.value,
       });
     };
+      
     if (imputEmail.value.length > 0) {
       try {
         fetsh();
@@ -32,20 +28,19 @@ const Footer = ({ showModal }) => {
 
 	return (
 		<>
-            <div className={style.navbar}>
-                <form onSubmit={handleSubmit}>
+      <div className={style.navbar}>
+        <form className={style.subscribeForm} onSubmit={handleSubmit}>
+          <input
+            className={style.input}
+            name="imputEmail"
+            type="email"
+            placeholder="Enter your email address"
+          />
                   
-                    <input
-                      className={style.input}
-                      name="imputEmail"
-                      type="email"
-                      placeholder="Enter your email address"
-                    />
-                  
-                    <button className={style.btn} type="submit">Subscribe</button>
-                </form>
+          <button className={style.btn} type="submit">Subscribe</button>
+        </form>
                 
-            </div>
+      </div>
 		</>
 	)
 }
