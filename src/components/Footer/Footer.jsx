@@ -6,7 +6,7 @@ import style from './style.module.css'
 
 const Footer = () => {
     
-    const handleSubmit = event => {
+  const handleSubmit = event => {
     event.preventDefault();
     const { imputEmail } = event.target.elements;
 
