@@ -22,7 +22,6 @@ const Layout = () => {
 		<div className='container'>
 			
 			<Header
-				// isRegistration={id !== 'signin'}
 				// showModal={showModal}
 			/>
 			

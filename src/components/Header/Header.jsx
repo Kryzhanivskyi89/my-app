@@ -6,17 +6,14 @@ import style from './style.module.css'
 // import Login from "../pages/authPage/Login"
 // import Signup from "../pages/authPage/Signup"
 
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { logoutThunk } from '../../redux/auth/authOperations';
-// import { AuthButton } from "../AuthButton/AuthButton";
 
-// 
-const Header = ({isRegistration, showModal}) => {
+const Header = ({ showModal}) => {
+    const { token } = useSelector((state) => state.auth)
 
     // const [isShowModal, setIsShowModal] = useState(false)
-    console.log(isRegistration)
 	// const showModal = () => setIsShowModal(true)
-
 	// const closeModal = () => setIsShowModal(false)
     const dispatch = useDispatch();
 
@@ -24,11 +21,6 @@ const Header = ({isRegistration, showModal}) => {
 	const handleSignUp = () => {
 		navigate('/auth/:id')
     }
-    
-    const handleLogin = () => {
-		navigate('/auth/signin')
-	}
-
 	return (
 		<>
             <nav className={style.navbar}>
@@ -64,8 +56,7 @@ const Header = ({isRegistration, showModal}) => {
                 </ul>
                          
                 <div className={style.authbtn}>
-                    {/* <AuthButton isRegistration={id !== 'signin'} /> */}
-                    {!isRegistration && (
+                    {!token && (
                         <button
                         className={style.btn}
                         type="button"
@@ -73,20 +64,12 @@ const Header = ({isRegistration, showModal}) => {
                         >
                         Авторизація
 		 			</button>)}
-                     {!isRegistration && (
+                     {token && (
                          <button
                          className={style.btn}
                          type="button"
                          onClick={() => dispatch(logoutThunk())}
                         >вихід</button>)}
-                    
-                    {/* <button
-                        className={style.btn}
-                        // onClick={handleLogin}
-						onClick={isRegistration ? handleLogin : () => dispatch(logoutThunk())}
-                    >
-						{!isRegistration ? 'Login' : 'Logout'}
-                    </button>  */}
                 </div>
             </nav>
 		</>
