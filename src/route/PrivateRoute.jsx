@@ -4,7 +4,7 @@ import { Navigate } from 'react-router-dom';
 import { selectAuth } from '../redux/auth/authSelectors';
 
 export const PrivateRoute = ({
-  redirectTo = '/',
+  redirectTo = '/auth/:id',
   component: Component,
   ...routerProps
 }) => {

@@ -8,6 +8,9 @@ import AuthPage from './pages/authPage/AuthPage';
 import Layout from './Layout/Layout'
 import { Chat } from './pages/Chat';
 import { AuthButton } from './AuthButton/AuthButton';
+
+import Social from './pages/Social';
+import Email from './pages/Email';
 const HomePage = lazy(() => import('./pages/HomePage'))
 
 
@@ -20,15 +23,16 @@ function App() {
 		/>
 		
 		<Route path='/' element={
-			//   <PrivateRoute component={
+			  <PrivateRoute component={
 				  <Layout />
-			//   } />
+			  } />
 			  }>
 			<Route index element={<HomePage />}/>
 			
-			<Route path='/chat' element={<Chat />}/>
-			<Route />
-		
+			<Route path='/chat' element={<Chat />}/><Route />
+			
+			<Route path='/social' element={<Social />}/><Route />
+			<Route path='/email' element={<Email />}/><Route />
 		</Route>
 		
 		
