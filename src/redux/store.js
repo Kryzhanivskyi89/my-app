@@ -7,38 +7,31 @@ import {
   PURGE,
   REGISTER,
 } from 'redux-persist';
+import { combineReducers } from 'redux';
 import { configureStore } from '@reduxjs/toolkit';
 import { authReducer } from './auth/authSlice';
+import { tasksReducer, filtersReducer } from './todo/reducer';
 import persistReducer from 'redux-persist/es/persistReducer';
 import storage from 'redux-persist/lib/storage';
-// import { ownerRecipeReducer } from './recipe/recipeSlice';
-// import { mainReducer } from './main/mainSlice';
-// import { themeReducer } from './theme/themeSlice';
-// import { categoriesReducer } from './categories/categoriesSlice';
 
-// import { shoppingListReducer } from './shopping/shoppingListSlice';
 
-// import { myRecipeReducer } from './myrecipes/myRecipeSlice';
-// import { searchReducer } from './search/searchSlice';
+const rootReducer = combineReducers({
+  auth: authReducer, // authReducer не потребує combineReducers, тому він просто додається до rootReducer
+  tasks: tasksReducer,
+  filters: filtersReducer,
+});
 
 const persistConfig = {
-  key: 'auth',
+  key: 'root',
   storage,
-  whitelist: ['token'],
+  whitelist: ['auth', 'tasks', 'filters'], // Вкажіть, які редюсери повинні зберігатись
 };
 
+const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 export const store = configureStore({
-  reducer: {
-    // theme: persistReducer(persistConfigUserTheme, themeReducer),
-    auth: persistReducer(persistConfig, authReducer),
-    // recipes: persistReducer(persistConfigRecipes, ownerRecipeReducer),
-    // shopping: shoppingListReducer,
-    // main: mainReducer,
-    // categories: categoriesReducer,
-    // myrecipes: myRecipeReducer,
-    // search: searchReducer,
-  },
+  reducer: persistedReducer,
+  
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
       serializableCheck: {

@@ -7,7 +7,7 @@ import {
 
 const Email = () => {
 	return (
-        <>
+        <section className='container'>
             <ul className={style.list}>
                 <li>
                     <a className={style.card} href="https://mail.ukr.net/desktop#msglist/f0/p0">Ukr.net
@@ -26,8 +26,9 @@ const Email = () => {
                 </li>
                 
             </ul>
+        </section>
 
-		</>
+		
 	)
 }
 

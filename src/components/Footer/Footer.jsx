@@ -35,11 +35,9 @@ const Footer = () => {
             name="imputEmail"
             type="email"
             placeholder="Enter your email address"
-          />
-                  
+          />    
           <button className={style.btn} type="submit">Subscribe</button>
-        </form>
-                
+        </form>   
       </div>
 		</>
 	)

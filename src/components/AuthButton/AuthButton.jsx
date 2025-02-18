@@ -21,21 +21,15 @@ export const AuthButton = ({isRegistration, showModal}) => {
         }
     
     return (
-      <div>
-          {isRegistration && (
-                        <button
-                        className={style.btn}
-                        type="button"
-                        onClick={handleSignUp}
-                        >
-                        Авторизація
-		 			</button>)}
-                     {isRegistration && (
-                         <button
-                         className={style.btn}
-                         type="button"
-                         onClick={() => dispatch(logoutThunk())}
-                        >вихід</button>)}
-    </div>
-  )
+        <div>
+            {isRegistration && (
+                <button className={style.btn} type="button" onClick={handleSignUp}>
+                    Авторизація
+                </button>)}
+            {isRegistration && (
+                <button className={style.btn} type="button" onClick={() => dispatch(logoutThunk())}>
+                    вихід
+                </button>)}
+        </div>
+    )
 }

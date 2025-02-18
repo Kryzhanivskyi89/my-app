@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import AuthForm from '../../AuthForm/AuthForm';
+import AuthForm from '../../components/AuthForm/AuthForm';
 // import { Container, ImgWrapper, Section } from './AuthPage.Styled';
 
 

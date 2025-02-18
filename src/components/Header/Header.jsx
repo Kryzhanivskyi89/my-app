@@ -11,12 +11,10 @@ import { logoutThunk } from '../../redux/auth/authOperations';
 
 const Header = ({ showModal}) => {
     const { token } = useSelector((state) => state.auth)
-
     // const [isShowModal, setIsShowModal] = useState(false)
 	// const showModal = () => setIsShowModal(true)
 	// const closeModal = () => setIsShowModal(false)
     const dispatch = useDispatch();
-
     const navigate = useNavigate()
 	const handleSignUp = () => {
 		navigate('/auth/:id')
@@ -33,21 +31,13 @@ const Header = ({ showModal}) => {
                     <label htmlFor="checkbox_toggle" className={style.hamburger}>&#9776;</label>
                     
                     <div className={style.menu}>  {/* <!-- NAVIGATION MENUS --> */}
-                        <li>
-                            <NavLink to='/'>Home</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to='/chat'>Chat</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to='/social'>Social</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to='/email'>E-mail</NavLink>
-                        </li>
+                        <li><NavLink to='/'>Home</NavLink></li>
+                        <li><NavLink to='/chat'>Chat</NavLink></li>
+                        <li><NavLink to='/todo'>ToDo</NavLink></li>
+                        <li><NavLink to='/social'>Social</NavLink></li>
+                        <li><NavLink to='/email'>E-mail</NavLink></li>
                         <li className={style.services}>
                             <NavLink href="">Contacts</NavLink>
-
                             {/* <!-- DROPDOWN MENU --> */}
                             <ul className={style.dropdown}>
                                 <li><a href="https://www.linkedin.com/in/andrew-full-stack/">LinkedIn </a></li>
@@ -63,19 +53,14 @@ const Header = ({ showModal}) => {
                          
                 <div className={style.authbtn}>
                     {!token && (
-                        <button
-                        className={style.btn}
-                        type="button"
-                        onClick={handleSignUp}
-                        >
-                        Авторизація
-		 			</button>)}
-                     {token && (
-                         <button
-                         className={style.btn}
-                         type="button"
-                         onClick={() => dispatch(logoutThunk())}
-                        >вихід</button>)}
+                        <button className={style.btn} type="button" onClick={handleSignUp}>
+                            Авторизація
+		 			    </button>)}
+
+                    {token && (
+                        <button className={style.btn} type="button" onClick={() => dispatch(logoutThunk())}>
+                            вихід
+                        </button>)}
                 </div>
             </nav>
 		</>
