@@ -1,11 +1,11 @@
 // Імпортуємо хук
 import { useSelector, useDispatch } from "react-redux";
 // Імпортуємо генератор екшену
-import { setStatusFilter } from "../../redux/todo/actions";
+import { setStatusFilter } from "../../../redux/todo/actions";
 // Імпортуємо об'єкт значень фільтра
-import { statusFilters } from "../../redux/todo/constants";
-import { Button } from './../Button/Button'
-import { getStatusFilter } from "../../redux/todo/selectors";
+import { statusFilters } from "../../../redux/todo/constants";
+import { Button } from '../../Button/Button'
+import { getStatusFilter } from "../../../redux/todo/selectors";
 import css from "./StatusFilter.module.css";
 
 

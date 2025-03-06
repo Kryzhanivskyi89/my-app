@@ -17,4 +17,4 @@ export const Button = ({ selected = false,
       {children}
     </button>
   );
-}
+  }

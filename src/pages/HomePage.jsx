@@ -2,13 +2,13 @@
 
 const HomePage = () => {
 	return (
-		<>
-			<section className='container'>
-				<div className='he'>
+		<section>
+			<div className='container'>
+				<div className=''>
 
 				</div>
-			</section>
-		</>
+			</div>
+		</section>
 	)
 }
 

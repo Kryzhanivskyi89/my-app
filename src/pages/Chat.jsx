@@ -85,41 +85,41 @@
 
 export const Chat = () => {
   return (
-    <div>
-      <div class="container">
-      <div class="row">
-        <h1>Andrew chat</h1>
-      </div>
-      <div class="row">
-        <div class="col-md-3">
-          <p class="nav-header">Любі гості чату</p>
-          <ul id="users" class="list-group mb-3"></ul>
+    <section>
+      <div className="container">
+        <div className="row">
+          <h1>Andrew chat</h1>
         </div>
-        <div class="col-md-9">
-          <div class="row mb-3">
-            <input
-              id="msg_name"
-              class="col-md-3 form-control"
-              placeholder="Ваш нік"
-              value=""
-            />
-            <input
-              id="msg_txt"
-              class="col-md-6 form-control"
-              placeholder="Введіть повідомлення"
-            />
-            <button
-              type="button"
-              id="msg_btn"
-              class="col-md-2 offset-md-1 btn btn-primary"
-            >
-              Send
-            </button>
+        <div className="row">
+          <div className="col-md-3">
+            <p className="nav-header">Любі гості чату</p>
+            <ul id="users" className="list-group mb-3"></ul>
           </div>
-          <div id="board"></div>
+          <div className="col-md-9">
+            <div className="row mb-3">
+              <input
+                id="msg_name"
+                className="col-md-3 form-control"
+                placeholder="Ваш нік"
+                value=""
+              />
+              <input
+                id="msg_txt"
+                className="col-md-6 form-control"
+                placeholder="Введіть повідомлення"
+              />
+              <button
+                type="button"
+                id="msg_btn"
+                className="col-md-2 offset-md-1 btn btn-primary"
+              >
+                Send
+              </button>
+            </div>
+            <div id="board"></div>
+          </div>
         </div>
-      </div>
     </div>
-    </div>
+    </section>
   )
 }

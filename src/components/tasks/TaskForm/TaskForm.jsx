@@ -1,10 +1,10 @@
 import css from './TaskForm.module.css'
-import {Button} from './../Button/Button'
+import {Button} from '../../Button/Button'
 
 // Імпортуємо хук
 import { useDispatch } from "react-redux";
 // Імпортуємо генератор екшену
-import { addTask } from "../../redux/todo/actions";
+import { addTask } from "../../../redux/todo/actions";
 
 export const TaskForm = () => {
 

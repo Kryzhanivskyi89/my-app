@@ -1,5 +1,5 @@
-import { StatusFilter } from "./../StatusFilter/StatusFilter";
-import { TaskCounter } from "./../TaskCounter/TaskCounter";
+import { StatusFilter } from "../StatusFilter/StatusFilter";
+import { TaskCounter } from "../TaskCounter/TaskCounter";
 import css from "./AppBuffet.module.css";
 
 export const AppBuffet = () => {

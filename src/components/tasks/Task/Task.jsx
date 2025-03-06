@@ -3,7 +3,7 @@ import { MdClose } from "react-icons/md";
 // Імпортуємо хук
 import { useDispatch } from "react-redux";
 // Імпортуємо генератор екшену
-import { deleteTask, toggleCompleted} from "../../redux/todo/actions";
+import { deleteTask, toggleCompleted} from "../../../redux/todo/actions";
 
 export const Task = ({ task }) => {
 

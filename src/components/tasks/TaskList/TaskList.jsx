@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 
-import { statusFilters } from '../../redux/todo/constants'
-import { getTasks, getStatusFilter } from "../../redux/todo/selectors";
+import { statusFilters } from '../../../redux/todo/constants'
+import { getTasks, getStatusFilter } from "../../../redux/todo/selectors";
 import { Task } from "../Task/Task"
 import css from "./TaskList.module.css";
 
