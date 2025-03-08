@@ -17,7 +17,7 @@ const Header = ( {onClick} ) => {
 	return (
 		<>
             <nav className={style.navbar}>
-                <div className={style.logo}>ANDREW</div>  {/* <!-- LOGO --> */}
+                <div className={style.logo}>&lt;AndrewDev/&gt;</div>  {/* <!-- LOGO --> */}
 
                 <ul className={style.nav__links}>  {/* <!-- NAVIGATION MENU --> */}
                     
@@ -26,6 +26,7 @@ const Header = ( {onClick} ) => {
                         <li><NavLink to='/chat'>Chat</NavLink></li>
                         <li><NavLink to='/todo'>ToDo</NavLink></li>
                         <li><NavLink to='/social'>Social</NavLink></li>
+                        <li><NavLink to='/music-player'>Music-player</NavLink></li>
                         <li><NavLink to='/email'>E-mail</NavLink></li>
                         <li className={style.services}>
                             <NavLink href="">Contacts</NavLink>
