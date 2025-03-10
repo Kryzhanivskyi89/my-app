@@ -23,10 +23,11 @@ const Header = ( {onClick} ) => {
                     
                     <div className={style.menu}>  {/* <!-- NAVIGATION MENUS --> */}
                         <li><NavLink to='/'>Home</NavLink></li>
-                        <li><NavLink to='/chat'>Chat</NavLink></li>
+                        <li><NavLink to='/calendar'>Calendar</NavLink></li>
                         <li><NavLink to='/todo'>ToDo</NavLink></li>
-                        <li><NavLink to='/social'>Social</NavLink></li>
+                        <li><NavLink to='/chat'>Chat</NavLink></li>
                         <li><NavLink to='/music-player'>Music-player</NavLink></li>
+                        <li><NavLink to='/social'>Social</NavLink></li>
                         <li><NavLink to='/email'>E-mail</NavLink></li>
                         <li className={style.services}>
                             <NavLink href="">Contacts</NavLink>

@@ -1,0 +1,34 @@
+
+.navigationControls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  
+  @media screen and (min-width: 1200px) {
+    margin-top: 0px;
+    }
+}
+
+.navigationBtn {
+    background-color: #4caf50; 
+    color: #ffffff; 
+    border: none;
+    border-radius: 5px; 
+    padding: 10px; 
+    font-size: 14px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.navigationBtn:hover
+.navigationBtn:focus {
+    background-color: #45a049; 
+    transform: scale(1.05);
+}
+
+.navigationMonth {
+    margin: 4px 12px;
+    font-size: 14px;
+}
