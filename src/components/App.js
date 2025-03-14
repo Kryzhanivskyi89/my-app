@@ -13,7 +13,7 @@ import { Todo } from '../pages/Todo';
 import MusicPlayer from '../pages/musicPlayer/MusicPlayer';
 import Social from '../pages/social/Social';
 import Email from '../pages/email/Email';
-const HomePage = lazy(() => import('../pages/HomePage'))
+const HomePage = lazy(() => import('../pages/homePage/HomePage.jsx'))
 
 
 function App() {
