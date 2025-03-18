@@ -27,8 +27,8 @@ const Header = ( {onClick} ) => {
                         <li><NavLink to='/todo'>ToDo</NavLink></li>
                         <li><NavLink to='/chat'>Chat</NavLink></li>
                         <li><NavLink to='/music-player'>Music-player</NavLink></li>
-                        <li><NavLink to='/social'>Social</NavLink></li>
-                        <li><NavLink to='/email'>E-mail</NavLink></li>
+                        {/* <li><NavLink to='/social'>Social</NavLink></li>
+                        <li><NavLink to='/email'>E-mail</NavLink></li> */}
                         <li className={style.services}>
                             <NavLink href="">Contacts</NavLink>
                             {/* <!-- DROPDOWN MENU --> */}

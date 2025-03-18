@@ -11,8 +11,8 @@ import Calendar from '../pages/Calendar/Calendar.tsx';
 import { Chat } from '../pages/Chat';
 import { Todo } from '../pages/Todo';
 import MusicPlayer from '../pages/musicPlayer/MusicPlayer';
-import Social from '../pages/social/Social';
-import Email from '../pages/email/Email';
+// import Social from '../pages/social/Social';
+// import Email from '../pages/email/Email';
 const HomePage = lazy(() => import('../pages/homePage/HomePage.jsx'))
 
 
@@ -31,8 +31,8 @@ function App() {
 				<Route path='/chat' element={<Chat />}/><Route />
 				<Route path='/todo' element={<Todo />}/><Route />
 				<Route path='/music-player' element={<MusicPlayer />}/><Route />
-				<Route path='/social' element={<Social />}/><Route />
-				<Route path='/email' element={<Email />}/><Route />
+				{/* <Route path='/social' element={<Social />}/><Route />
+				<Route path='/email' element={<Email />}/><Route /> */}
 			</Route>
 		</Routes>
   	)
