@@ -2,6 +2,7 @@ import axios from 'axios';
 import { Notify } from 'notiflix';
 
    axios.defaults.baseURL = 'https://andrew-o1p4.onrender.com';
+// axios.defaults.baseURL = 'http://localhost:3000';
 
 const tokenOperation = {
   setToken: token => {
